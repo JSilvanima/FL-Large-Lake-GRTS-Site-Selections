@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <pubdate>20100101</pubdate>
+                <title>WMS Cycle 3 Reporting Units</title>
+                <geoform>vector digital data</geoform>
+                <onlink>https://publicfiles.dep.state.fl.us/OTIS/GIS/data/WMS_CYCLE3_REPORTING_UNITS.zip</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>This layer defines the six boundaries of the "Cycle 3" Reporting Units used by the Status Monitoring Network of the Florida Department of Environmental Protection's Integrated Water Resource Monitoring program. These boundaries are intended to be utilized to spatially stratify statewide surface and ground water resources, beginning with Cycle 3 (January, 2009), and continuing until at least the end of Cycle 5 (December, 2011), or until the design of the program is altered. Additionally, this layer serves as a spatial and temporal update to replace the preceding layer of reporting units. Previous spatial boundaries were inherited from TMDL Basins which rotated on a five year statewide sampling cycle. The Cycle 3 Reporting Units are largely based off of manipulated Water Management District boundaries, from which a statewide sampling rotation is completed annually.  Please reference the metadata for contact information.  </abstract>
+            <purpose>This dataset was created for resource management and cartographic purposes.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <rngdates>
+                    <begdate>20090101</begdate>
+                    <enddate>20111231</enddate>
+                </rngdates>
+            </timeinfo>
+            <current>publication date</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-87.630408</westbc>
+                <eastbc>-79.872612</eastbc>
+                <northbc>31.041203</northbc>
+                <southbc>24.501839</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>environment</themekey>
+            </theme>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Environmental Monitoring and Modeling</themekey>
+                <themekey>WMS</themekey>
+                <themekey>Watershed Monitoring Section</themekey>
+                <themekey>Reporting Unit</themekey>
+                <themekey>Status Monitoring Network</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>Florida</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>This data is intended to be used for general information and planning purposes, and is not appropriate for legal and/or cadastral purposes. For more information regarding such uses, contact nathan.woeber@dep.state.fl.us.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Watershed Monitoring Section/ Florida Department of Environmental Protection</cntorg>
+                    <cntper>Andy Woeber</cntper>
+                </cntorgp>
+                <cntpos>Environmental Consultant/ GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>2600 Blair Stone Road</address>
+                    <city>Tallahassee</city>
+                    <state>Florida</state>
+                    <postal>32399-2400</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>850-245-8031</cntvoice>
+                <cntemail>nathan.woeber@dep.state.fl.us</cntemail>
+                <hours>7am to 4pm, Monday through Friday</hours>
+            </cntinfo>
+        </ptcontac>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Watershed Monitoring Section/ Florida Department of Environmental Protection</cntorg>
+                    <cntper>Andy Woeber</cntper>
+                </cntorgp>
+                <cntpos>Environmental Consultant/ GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>2600 Blair Stone Road</address>
+                    <city>Tallahassee</city>
+                    <state>Florida</state>
+                    <postal>32399-2400</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>850-245-8031</cntvoice>
+                <cntemail>nathan.woeber@dep.state.fl.us</cntemail>
+                <hours>7am to 4pm, Monday through Friday</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>Florida Department of Environmental Protection.</datacred>
+        <secinfo>
+            <secsys>None</secsys>
+            <secclass>Unclassified</secclass>
+            <sechandl>None</sechandl>
+        </secinfo>
+        <native>Version 6.2 (Build 9200) ; Esri ArcGIS 10.3.1.4959</native>
+    </idinfo>
+    <dataqual>
+        <logic>The Reporting Unit polygons were visually inspected to ensure coverage for the Status Network surface water list frames.  Borders of the regions were compared to the extent of the Cadastral 2016 layer and the USGS National Hydrography Dataset layers for Florida.</logic>
+        <complete>The layer was visually inspected to determine if any omissions of data had occurred.</complete>
+        <lineage>
+            <procstep>
+                <procdesc>The reporting unit boundaries for Zone 1, Zone 2, and Zone 3 were updated to reflect coverage of areas that were not previously included in the State of Florida boundary and to ensure that the extent of the current coverages of the surface water Status Network hydrologic features in the list frames are included in the zones.  A 50-meter buffer was utilized around the linear extents of the Perdido River, Chattahoochee River, and the St. Marys River to ensure that the reporting zone boundary covered the resource to be sampled.   The reporting unit boundary for these zones was also updated using the 2016 Cadastral layer and the USGS National Hydrography Dataset layer.  Edits to Zone 4, Zone 5, and Zone 6 were not completed for this process.</procdesc>
+                <procdate>20171121</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>FDEP, WMS</cntorg>
+                            <cntper>Andy Woeber</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Analyst</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>2600 Blair Stone Road</address>
+                            <city>Tallahassee</city>
+                            <state>Florida</state>
+                            <postal>32399</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>850-245-8031</cntvoice>
+                        <cntemail>nathan.woeber@dep.state.fl.us</cntemail>
+                        <hours>7-4pm M-F</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>6</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DEP.WMS_CYCLE3_REPORTING_UNITS</enttypl>
+                <enttypd>Feature classes are homogeneous collections of common features, each having the same spatial representation</enttypd>
+                <enttypds>ESRI GIS Data Dictionary</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>ZONE_NAME</attrlabl>
+                <attrdef>The name for the reporting zone.</attrdef>
+                <attrdefs>GWIS Database Dictionary Version 1.5</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>This field contains 20 alphanumeric characters.</udom>
+                                        				
+                
+                </attrdomv>
+                <attrmfrq>009</attrmfrq>
+            </attr>
+            <attr>
+                <attrlabl>REPORTING_UNIT</attrlabl>
+                <attrdef>One of the six geographic zones used for data analysis.</attrdef>
+                <attrdefs>GWIS Database Dictionary Version 1.5</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>The reporting unit names of the 6 zones used in the current cycle (3) of the Status Network; and the reporting unit names of the 29 TDML basins for cycle two of the status network (2004-2008), and the reporting unit names for the 20 reporting units used for the status network in cycle one.  Zones correspond to WMS boundaries, except for South Florida which is split into an east and west subunits.  For cycle two of the status network see TMDL_BASIN database field name.  Typical values are:  Zone-1</udom>
+                                        				
+                
+                </attrdomv>
+                <attrmfrq>009</attrmfrq>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+                <attrmfrq>009</attrmfrq>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.AREA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE.LEN</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20171121</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Florida Department of Environmental Protection (FDEP) OTIS/GIS Section</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>2600 Blair Stone Rd</address>
+                    <address>MS 6520</address>
+                    <city>Tallahassee</city>
+                    <state>FL</state>
+                    <postal>32399-2400</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntemail>GIS.Librarian@dep.state.fl.us</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
