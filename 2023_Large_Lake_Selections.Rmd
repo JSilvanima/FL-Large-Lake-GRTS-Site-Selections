@@ -1,7 +1,7 @@
 ---
 title: __Florida 2023 Large Lake Sample Design Documentation__
 # author: "Jay Silvanima"
-date: "01/12/2023"
+date: "01/13/2023"
 output:
   html_document: default
   pdf_document: default
@@ -32,7 +32,6 @@ Mail Station 3560
 Tallahassee, Florida 32399-2400  
 James.Silvanima@FloridaDEP.gov   
 phone: 850-245-8507  
-fax: 850-245-8554  
 
 ### Analysis and Reporting Coordinator
 __Stephanie Sunderman-Barnes__  
@@ -46,8 +45,10 @@ Tallahassee, Florida 32399-2400
 Stephanie.Sundermanbarnes@FloridaDEP.gov  
 850-245-8517  
 
-## __Description of Sample Design for Panel Design__
-Target population: All lakes in Florida that are greater than or equal to 10.0 hectares. Defined by FDEP based on the 2007 24K NHD water body GIS coverage. This identifies 1,699 large lakes.
+## __Description of Sample Design__
+
+### __Target population:__
+All lakes in Florida that are greater than or equal to 10.0 hectares. Defined by FDEP based on the 2007 24K NHD water body GIS coverage. This identifies 1,699 large lakes.
 
 ### __Sample Frame:__ 
 The frame was provided by Florida Department of Environmental Protection, named _‘Cycle17_LargeLakes_coverage_2023.shp’_. The GIS coverage is a large lake polygon coverage provided by FDEP based on the 2007 24K NHD water body data. GIS Data:
@@ -56,7 +57,7 @@ Attributes include: GNIS_NAME, REACHCODE, HECTARES, REPUNIT,  RESOURCE, Comments
 
 The state of Florida is divided into six regions (reporting units) for sampling design. The reporting unit name attribute in Cycle17_LargeLakes_2023_coverage.shp is REPUNIT and the six values are: ZONE 1, ZONE 2, ZONE 3, ZONE 4, ZONE 5, ZONE 6.
 
-#### __Survey Design for Cycle 17 Large Lake Site Selections:__
+### __Survey Design for Cycle 17 Large Lake Site Selections:__
 
 Purpose of this R script is to select large lake sites throughout the 6 reporting units as part of an annual water quality sample survey of Florida large lakes.   
 
@@ -64,7 +65,7 @@ Purpose of this R script is to select large lake sites throughout the 6 reportin
 # Code updated 01/06/2023 so it may be run in spsurvey 5.4.0 by Jay Silvanima. 
 # This is the first set of site selections performed using spsurvey version 5.3.0 and an unequal probability sample.  
 ---
-Code developed using R version 4.1.2 and spsurvey version 5.4.0.  
+Code developed using R version 4.1.2 and spsurvey version 5.4.0. Code must be run in 64 bit version of R. 
 
 ***  
 Load the libraries that will be called in this script.
@@ -315,7 +316,7 @@ plot(st_geometry(wms_c3_reporting_units), border='darkgray', main= '2023 Large L
 plot(st_geometry(dsgn_ll), border = 'blue', col = 'blue', add = TRUE)
 plot(st_geometry(sites_over), pch = 1, col = 'red', add = TRUE)
 plot(st_geometry(sites_base), pch = 21, bg = 'red', add = TRUE)
-legend(120000, 400000, legend=c('Zones','Large Lakes'), col=c('black','blue'),lty=c(1,1))
+legend(120000, 400000, legend=c('Zones','Large Lakes'), col=c('darkgray','blue'),lty=c(1,1))
 legend(120000, 300000, legend=c('Base Sample Sites','Over Sample Sites'), col=c('red','red'),pch=c(16,1))
 dev.off()
 ```
@@ -338,29 +339,29 @@ The dbf file associated with the shapefile may be read by Excel.
    
 The dbf file has the following variable definitions:  
 _SiteID_: Unique site identification (character)  
-_siteUse_: Whether the site is a legacy site (Legacy), base site (Base), reverse 
+_siteuse_: Whether the site is a legacy site (Legacy), base site (Base), reverse 
 hierarchically ordered replacement site (Over), or nearest neighbor replacement site (Near).  
 _replsite_: The replacement site ordering. replsite is None if the site is not a replacement 
 site, Next if it is the next reverse hierarchically ordered replacement site to use, or Near_,
 where the word following _ indicates the ordering of sites closest to the originally sampled site.  
-_ln_WGS84_: Longitude coordinates using the WGS84 coordinate system (EPSG:4326)  
-_lt_WGS84_: Latitude coordinates using the WGS84 coordinate system (EPSG:4326)  
-_stratum_: A stratum indicator. stratum is None if the sampling design was unstratified. If the 
-sampling design was stratified, stratum indicates the stratum. _wgt_: Weight (in hectares), inverse of inclusion probability, to be used in statistical analyses.  
+_lon_WGS84_: Longitude coordinates using the WGS84 coordinate system (EPSG:4326)  
+_lat_WGS84_: Latitude coordinates using the WGS84 coordinate system (EPSG:4326)  
+_stratum_: A stratum indicator. stratum is None if the sampling design was unstratified. If the sampling design was stratified, stratum indicates the stratum.  
+_wgt_: Weight (in hectares), inverse of inclusion probability, to be used in statistical analyses.  
 _ip_: The site's original inclusion probability (the reciprocal of wgt).  
 _mdcaty_: An unequal probability grouping indicator. mdcaty is None if the sampling design did not use 
-unequal inclusion probabilities. If the sampling design did use unequal inclusion probabilities, 
-mdcaty indicates the unequal probability level.  
-_gnis_nm_: The name of the selected site's streams feature, derived from the USGS Geographic Names 
+unequal inclusion probabilities. If the sampling design did use unequal inclusion probabilities, mdcaty indicates the unequal probability level.    
+_gnis_name_: The name of the selected site's streams feature, derived from the USGS Geographic Names 
 Information System database.  
-_reachcd_: The identification code for the selected site's corresponding streams flowline feature 
+_reachcode_: The identification code for the selected site's corresponding streams flowline feature 
 found in the National Hydrography Dataset for Florida.  
 _hectares_: The calculated area of the selected lake feature, expressed in hectares. 
 _repunit_: The reporting unit (Zone) that the selected site is located within.   
-_resourc_: The water resource for the selected site's stream feature.  
+_resource_: The water resource for the selected site's stream feature.  
 _comments_: Comments associated with the selected lake's feature.  
 _lakecode_: A unique feature ID containing the concatenation of the  feature class OBJECTID and the REACHCODE for the selected site's river feature.  
-_shape_leng_: The length of the selected lake polygon feature, expressed in meters.
+_shape_geometry_: The length of the selected lake polygon feature, expressed in meters.  
+_area_cat_: Unequal probability grouping indicator used in the survey design.  
 _shape_area_: The area of the selected lake polygon feature, expressed in square meters.
 _sframe_st_: Strata used in the survey design.
 _geometry_: Geometry of the selected lake feature.
@@ -416,22 +417,23 @@ functions is available to do common population estimates in the statistical soft
 
 ## __Contacts for Questions and Inquiries about GRTS Sampling Program/Protocols__
 Anthony (Tony) R. Olsen  
-USEPA NHEERL  
-Western Ecology Division  
+Pacific Ecological Systems Division  
 200 S.W. 35th Street  
 Corvallis, OR 97333  
 Voice: (541) 754-4790  
-Fax: (541) 754-4716  
 email: Olsen.Tony@epa.gov  
    
 or  
    
 Michael Dumelle  
 USEPA  
-Freshwater Ecology Branch  
-Office of Research and Development  
-Corvalis, OR 97333  
-email: Dumelle.Michael@epa.gov  
+Pacific Ecological Systems Division
+200 S.W. 35th Street  
+Corvallis, OR 97333
+Voice: 541-754-4740
+email: Dumelle.Michael@epa.gov 
+
+
 
 ## __Bibliography__  
 Dumelle M., T.M. Kincaid, A.R. Olsen, and M.H. Weber. 2022. spsurvey: Spatial Sampling Design and Analysis. R package version 5.4.0.  
